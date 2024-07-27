@@ -1,13 +1,17 @@
-function taskFirst() {
-    const task = 'I prefer const when I can.';
-    return task;
+export function taskFirst() {
+  // Use const for variables that do not change
+  const task = 'I prefer const when I can.';
+  return task;
 }
 
-function taskNext() {
-    let task = 'But sometimes let is okay';
-    return task;
+export function getLast() {
+  return ' is okay';
 }
 
-// Example usage
-console.log(taskFirst()); // Output: 'I prefer const when I can.'
-console.log(taskNext());  // Output: 'But sometimes let is okay'
+export function taskNext() {
+  // Use let for variables that might change
+  let combination = 'But sometimes let';
+  combination += getLast();
+
+  return combination;
+}

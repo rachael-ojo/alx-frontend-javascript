@@ -1,3 +1,3 @@
 function countArgs(a, b, c) {
-    return arguments.length;
+  return arguments.length;
 }

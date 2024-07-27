@@ -1,12 +1,12 @@
 function getFullBudgetObject(income, expenses) {
-    return {
-        income: income,
-        expenses: expenses,
-        getTotalBudget: function() {
-            return this.income - this.expenses;
-        },
-        getSummary: function() {
-            return `Income: ${this.income}, Expenses: ${this.expenses}, Total Budget: ${this.getTotalBudget()}`;
-        }
-    };
+  return {
+    income,
+    expenses,
+    getTotalBudget() {
+      return this.income - this.expenses;
+    },
+    getSummary() {
+      return `Income: ${this.income}, Expenses: ${this.expenses}, Total Budget: ${this.getTotalBudget()}`;
+    },
+  };
 }

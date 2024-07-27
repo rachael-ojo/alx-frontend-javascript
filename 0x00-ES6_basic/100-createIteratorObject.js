@@ -6,7 +6,7 @@ const reportObject = createReportObject(employeesObject);
 const iterator = createIteratorObject(reportObject);
 
 for (const employee of iterator) {
-    console.log(employee);
+  console.log(employee);
 }
 // Output:
 // Alice
