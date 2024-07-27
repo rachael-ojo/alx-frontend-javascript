@@ -1,19 +1,28 @@
 {
   "scripts": {
-    "lint": "./node_modules/.bin/eslint",
+    "lint": "eslint",
     "check-lint": "lint [0-9]*.js",
     "dev": "npx babel-node",
     "test": "jest",
-    "full-test": "./node_modules/.bin/eslint [0-9]*.js && jest"
+    "full-test": "eslint [0-9]*.js && jest"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.9",
     "@babel/node": "^7.8.0",
-    "eslint": "^6.4.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "@babel/preset-env": "^7.25.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^22.17.0",
     "jest": "^24.9.0"
-  }
+  },
+  "name": "0x02-ES6_classes",
+  "description": "0x02. ES6 Classes Table of Contents Introduction Features Usage Installation Examples Contributing License Introduction This project covers the basics and advanced usage of ES6 classes in JavaScript. ES6 classes offer a new syntax for creating objects and dealing with inheritance, making the code more readable and easier to manage.",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "dependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
