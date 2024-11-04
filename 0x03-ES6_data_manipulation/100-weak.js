@@ -1,19 +1,13 @@
-function updateUniqueItems(itemsMap) {
-    // Check if the argument is a Map
-    if (!(itemsMap instanceof Map)) {
-      throw new Error('Cannot process');
-    }
-  
-    // Iterate over the map entries
-    for (const [key, value] of itemsMap.entries()) {
-      // Check if the quantity is 1
-      if (value === 1) {
-        // Update the quantity to 100
-        itemsMap.set(key, 100);
-      }
-    }
-  
-    // Return the updated map
-    return itemsMap;
-  }
-  
+import { queryAPI, weakMap } from './yourModule';
+
+try {
+  const endpoint = { url: '/api/data' }; // Example endpoint object
+  queryAPI(endpoint); // Call 1
+  queryAPI(endpoint); // Call 2
+  queryAPI(endpoint); // Call 3
+  queryAPI(endpoint); // Call 4
+  queryAPI(endpoint); // Call 5
+  queryAPI(endpoint); // Call 6 - This should throw an error
+} catch (error) {
+  console.error(error.message); // Output: 'Endpoint load is high'
+}

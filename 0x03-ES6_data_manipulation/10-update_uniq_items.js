@@ -1,16 +1,19 @@
-// Create a map similar to the one from the previous task
-const items = new Map([
-    ['item1', 1],
-    ['item2', 2],
-    ['item3', 1],
-    ['item4', 3]
-  ]);
+function updateUniqueItems(itemsMap) {
+    // Check if the argument is a Map
+    if (!(itemsMap instanceof Map)) {
+      throw new Error('Cannot process');
+    }
   
-  try {
-    const updatedItems = updateUniqueItems(items);
-    console.log(updatedItems);
-    // Output should show item1 and item3 with quantity updated to 100
-  } catch (error) {
-    console.error(error.message);
+    // Iterate over the map entries
+    for (const [key, value] of itemsMap.entries()) {
+      // Check if the quantity is 1
+      if (value === 1) {
+        // Update the quantity to 100
+        itemsMap.set(key, 100);
+      }
+    }
+  
+    // Return the updated map
+    return itemsMap;
   }
   
