@@ -1,11 +1,7 @@
-function getListStudentIds(students) {
-    if (!Array.isArray(students)) {
-        return [];
-    }
-    return students.map(student => student.id);
-}
-
-// Example usage:
-const students = getListStudents();
-const studentIds = getListStudentIds(students);
-console.log(studentIds);  // Output: [1, 2, 5]
+export default function getListStudents() {
+    return [
+      { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
+      { id: 2, firstName: 'James', location: 'Columbia' },
+      { id: 5, firstName: 'Serena', location: 'San Francisco' },
+    ];
+  }
