@@ -1,11 +1,4 @@
-export default function signUpUser(firstName, lastName) {
-  return Promise.resolve({
-    firstName: firstName,
-    lastName: lastName
-  });
+export default function getFullResponseFromAPI(success) {
+  if (success) return Promise.resolve({ status: 200, body: 'Success' });
+  return Promise.reject(new Error('The fake API is not working currently'));
 }
-
-// Example usage
-signUpUser('John', 'Doe').then(result => {
-  console.log(result); // Output: { firstName: 'John', lastName: 'Doe' }
-});

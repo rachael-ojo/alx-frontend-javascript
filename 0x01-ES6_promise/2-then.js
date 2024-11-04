@@ -1,11 +1,6 @@
-export default function signUpUser(firstName, lastName) {
-  return Promise.resolve({
-    firstName: firstName,
-    lastName: lastName
-  });
+export default function handleResponseFromAPI(promise) {
+  return promise
+    .then(() => ({ status: 200, body: 'success' }))
+    .catch(() => new Error())
+    .finally(() => console.log('Got a response from the API'));
 }
-
-// Example usage
-signUpUser('John', 'Doe').then(result => {
-  console.log(result); // Output: { firstName: 'John', lastName: 'Doe' }
-});

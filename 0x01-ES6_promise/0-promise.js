@@ -1,11 +1,3 @@
-export default function uploadPhoto(fileName) {
-  return new Promise((resolve, reject) => {
-    reject(new Error(`${fileName} cannot be processed`));
-  });
+export default function getResponseFromAPI() {
+  return Promise.resolve(true);
 }
-
-// Example usage
-uploadPhoto('test.jpg')
-  .catch(error => {
-    console.error(error.message); // Output: test.jpg cannot be processed
-  });
