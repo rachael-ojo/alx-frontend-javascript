@@ -1,15 +1,16 @@
-// 11-main.js
+export default class HolbertonClass {
+  constructor(size, location) {
+    this._size = size;
+    this._location = location;
+  }
 
-import HolbertonClass from './10-holbertonClass';
-
-try {
-  const holberton = new HolbertonClass(30, 'San Francisco');
-  console.log(holberton.size); // 30
-  console.log(holberton.location); // San Francisco
-
-  // Casting to Number and String
-  console.log(Number(holberton)); // 30
-  console.log(String(holberton)); // San Francisco
-} catch (error) {
-  console.error(error.message);
+  [Symbol.toPrimitive](hint) {
+    if (hint === 'number') {
+      return this._size;
+    }
+    if (hint === 'string') {
+      return this._location;
+    }
+    return null;
+  }
 }
