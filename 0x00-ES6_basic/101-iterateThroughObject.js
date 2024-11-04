@@ -1,8 +1,7 @@
-// Assuming previous functions `createEmployeesObject`, `createReportObject`, and `createIteratorObject` are defined
-
-const employeesObject = createEmployeesObject('Engineering', ['Alice', 'Bob', 'Charlie']);
-const reportObject = createReportObject(employeesObject);
-const iterator = createIteratorObject(reportObject);
-
-console.log(iterateThroughObject(iterator));
-// Output: "Alice, Bob, Charlie"
+export default function iterateThroughObject(reportWithIterator) {
+    const returnString = [];
+    for (const report of reportWithIterator) {
+      returnString.push(report);
+    }
+    return returnString.join(' | ');
+  }

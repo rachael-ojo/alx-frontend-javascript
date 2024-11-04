@@ -1,8 +1,9 @@
-function createBudget(food, rent, utilities) {
+export default function getBudgetObject(income, gdp, capita) {
   const budget = {
-    food,
-    rent,
-    utilities,
+    income,
+    gdp,
+    capita,
   };
+
   return budget;
 }
