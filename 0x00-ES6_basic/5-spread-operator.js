@@ -1,3 +1,3 @@
-function concatenateArraysAndString(arr1, arr2, str) {
-  // Function body to be modified
+export default function concatArrays(array1, array2, string) {
+  return [...array1, ...array2, ...string];
 }
